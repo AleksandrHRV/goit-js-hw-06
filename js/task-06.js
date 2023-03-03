@@ -2,7 +2,10 @@ const inputEl = document.querySelector("#validation-input");
 
 const doFocus = (event) => {
   inputEl.classList.add("invalid");
-  if (event.currentTarget.value.length >= inputEl.attributes[2].value) {
+  if (
+    event.currentTarget.value.length >= inputEl.attributes[2].value &&
+    event.currentTarget.value.length <= inputEl.attributes[2].value
+  ) {
     inputEl.classList.replace("invalid", "valid");
   }
 };

@@ -11,10 +11,8 @@ const refs = {
 };
 
 const makeBackground = (event) => {
-  refs.body.style.backgroundColor = getRandomHexColor();
-  refs.bgColor.textContent = getRandomHexColor();
-  refs.bgColor.style.color = getRandomHexColor();
-  refs.btn.style.backgroundColor = getRandomHexColor();
-  refs.btn.style.color = getRandomHexColor();
+  const bodyColor = refs.body.style.backgroundColor = getRandomHexColor();
+  refs.bgColor.textContent = bodyColor;
+
 };
 refs.btn.addEventListener("click", makeBackground);
